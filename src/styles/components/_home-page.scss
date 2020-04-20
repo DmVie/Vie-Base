@@ -1,0 +1,50 @@
+
+section h1 img,
+section h1 i {
+  position: absolute;
+  width: 60px;
+  opacity: .15;
+  right: 20px;
+  top: -15px;
+  color: $purple
+}
+
+section h1 i {
+  font-size: 5rem;
+}
+
+
+.sect  div.more-info-div{
+  text-align: center;
+  padding: $l-size
+}
+
+.flex-split img {
+  width: 100%;
+}
+
+.center-wrapper {
+  margin-top: 20px;
+}
+
+ul.grid-service.articles-thumb-featured {
+  margin-bottom: 20px;
+  display: block;
+}
+
+ul.grid-service.articles-thumb-featured > li {
+  @media screen and (min-width: 930px) {
+    min-width: 650px !important;
+  }
+}
+
+
+
+
+/* MEDIUM DEVICE WIDTHS (900PX) */
+
+@media screen and (min-width: 900px) {
+  .sect .home-page-feature-details { 
+    margin-left: 50px
+  }  
+}

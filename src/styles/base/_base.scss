@@ -1,0 +1,253 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Open Sans', Helvetica;
+
+}
+
+#root {
+  display:flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  margin: $xs-size 0; 
+  padding: 0;
+  color: $off-black;
+  font-family: 'Raleway', Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: $xl-size;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: lighten($off-black, 15%);
+}
+
+h3 {
+  font-size: $ml-size
+}
+
+h4 {
+  font-size: $m-size
+}
+
+
+p,  a, span, div, input, textarea {
+  font-size: $m-size;
+  color: $light-grey;
+  line-height: 1.2;
+  @media screen and (min-width: 500px) {
+    font-size: $ml-size;
+  }
+}
+
+@media screen and (min-width: 930px) {
+  h1 { font-size: $xxl-size}
+}
+
+li {
+  color: $off-black;
+}
+
+header h1 {
+  color: white;
+}
+
+/* Allows abslute positioning for font icons in headers where they are included. -- see build tools / site features for example. */
+h2.contains-icon,
+h1.contains-icon{
+  position: relative;
+  margin-bottom: 30px
+}
+
+h2.contains-icon.contains-icon--no-margin,
+h1.contains-icon.contains-icon--no-margin {
+  margin-bottom: 0;
+}
+
+header, footer {
+  background: $dark-blue;
+}
+
+header p, footer p{  
+  color: white;
+}
+
+.main-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.page-content {
+  flex-grow: 1;
+  background: rgb(247, 246, 245);
+}
+
+section {
+  background: white;
+}
+
+div.center-wrapper {
+  text-align: center;
+  padding: $l-size;
+}
+
+
+// Standard Section
+section.sect {
+  margin-top: 40px;
+  padding: $l-size;
+  text-align: center;
+}
+
+section.sect.sect--no-margin-top {
+  margin-top: 0
+}
+
+hr.sect-line {
+  height: .6px;
+  border: none;
+  background: rgb(199, 199, 199);
+  width: 50%;
+  margin: 10px auto 20px;
+   
+ }
+
+
+/* BUTTONS */
+
+.button {
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background .5s ease;
+  cursor: pointer;
+  font-size: $m-size;
+  outline: none;
+  border: none;
+  font-family: 'Open Sans', Arial;
+  padding: $xs-size
+}
+
+.button--btn1 {
+  background: $button-pink;
+  color: white;
+}
+
+.button--btn1:hover {
+  background: darken($button-pink, 10%)
+}
+
+.button--btn1:active  {
+  box-shadow: inset 0px 0px 6px 1px rgba(0,0,0, .8)
+}
+
+.button.button--disabled {
+  background: rgb(190, 190, 190);
+  color: rgb(151, 151, 151);
+  cursor: auto;
+  text-decoration: line-through;
+}
+
+
+/* Select Dropdowns */
+  /* svg image for custom select button */
+  .select-css {
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.4;
+    padding: .6em 1.4em .5em .8em;
+    margin: 10px;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .5em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #FFF;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+      linear-gradient(to bottom, #A5035C 0%,#6C0630 100%);
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+  }
+
+  .select-css::-ms-expand {
+    display: none;
+  }
+
+  .select-css:hover {
+    border-color: #888;
+  }
+
+  .select-css:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 1px 1px rgba(59, 153, 252, .7);
+    box-shadow: 0 0 0 1px -moz-mac-focusring;
+    color: rgba(59, 153, 252, 1);
+    outline: none;
+  }
+  .select-css option {
+    font-weight:normal;
+  }
+
+
+  /* Element when used wraps two inner elements and defaults them to stack vertically until 930px where the two will then change to side by side */
+ .flex-split {
+    display: flex;
+    flex-direction: column;
+    margin: $l-size auto 0;
+    @media screen and (min-width: 930px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }  
+  }
+
+.flex-split__left-side,
+.flex-split__right-side {
+  background: white;
+  @media screen and (min-width: 930px) {
+    width: 42vw;
+  }
+}
+.flex-split__left-side.constrain {
+  max-width: 500px;
+  margin: 0 auto;
+  @media screen and (min-width: 930px) {
+    max-width: none;
+  }
+}
+
+.flex-split__right-side {
+  @media screen and (min-width: 930px) {
+    padding: 0 20px;
+  }
+}
+
+// little bit space between the text and the daterange picker in the filters on projects and learnings page
+.ranging-from {
+  margin: 0 10px;
+}
+
+  
+/* DEFAULT H2 TAG WITH FONT ICONS INSIDE */
+h2 i.fas,
+h2 h1 i.fas {
+  color: rgba(151, 16, 16, 0.07);
+  margin-left: 15px;
+  font-size: 4em;
+  position: absolute;
+  top: 50px;
+  right: 30px;
+}

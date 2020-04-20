@@ -1,0 +1,60 @@
+.row:first-child{
+  margin-top: $xxxl-size;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 930px) {
+    margin-top: $l-size;
+    flex-direction: row;
+  }
+}
+
+.col {
+  margin-top: $xl-size;
+  background: #FFF;
+  text-align: center;
+  min-height: 200px;  // makes sure the container is big enough to cover the icons inside if the list is short.
+  @media screen and (min-width: 930px) {
+    width: 50%;
+    margin-top: 0;
+  }
+}
+
+.col1 {
+  @media screen and (min-width: 930px) {
+    margin-right: $s-size;
+  }
+  
+}
+
+.col2 {
+  @media screen and (min-width: 930px) {
+    margin-left: $m-size;
+  }  
+}
+
+.col1 img,
+.col1 .btn-links-wrapper {
+  width: 90%;
+  max-width: 500px;
+}
+
+.col1 .btn-links-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: $l-size auto;
+}
+
+.row h1{
+  margin: $l-size
+}
+
+.row h2 {
+  margin-top: $l-size;
+}
+
+.row:last-child{
+  margin-bottom: 30px;
+}

@@ -1,0 +1,23 @@
+
+.sect.project-page h1 {
+  margin-bottom: 40px;
+}
+
+.project-code-links-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  @media screen and (min-width: 600px) {
+    max-width: 500px;
+  }
+}
+
+
+.fas.fa-check-square {
+  color: rgb(109, 199, 109)
+}
+
+.fa-ul li {
+  padding: 5px;
+  text-align: left;
+}

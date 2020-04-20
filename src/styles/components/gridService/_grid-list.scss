@@ -1,0 +1,243 @@
+/* THE GRIDS UL*/
+ul.grid-service {
+  margin: 0 auto;
+  padding: 0;
+  @media screen and (min-width: 930px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+ul.grid-service li {
+  list-style: none;
+}
+
+// The actual li's not including any custom nested li's
+ul.grid-service > li {
+  list-style:none;
+  position: relative;
+  max-width: 500px;
+  margin: $xl-size auto 0;
+  @media screen and (min-width: 930px) {
+    width: 40vw
+  }
+  @media screen and (min-width: 1150px)  {
+    width: 35vw;
+  }
+}
+
+ul.grid-service li img{
+  width: 100%;
+  height: 100%;
+  box-shadow: 1px 3px 14px rgba(0,0,0, .2)
+}
+
+
+ul.grid-service li i.fa-info-circle{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: $xl-size;
+  color: rgb(233, 233, 233);
+  cursor: pointer;
+  opacity: .8;
+  z-index: 5
+}
+
+ul.grid-service h2 {
+  position: relative
+}
+
+
+/* THUMB OVERLAY  - ( the default style )
+================================================================= */
+.grid-thumb-overlay {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  overflow: hidden;
+  cursor: pointer;
+  text-overflow: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}  
+
+.grid-thumb-overlay a {
+  text-decoration: none;
+}
+
+.grid-thumb-overlay h2 {
+  font-size: $m-size;
+  padding: 0 0 $xxxs-size;
+  margin: 0;
+  @media  (min-width: 400px ) {
+    font-size: $ml-size;
+  }
+  @media  (min-width: 580px ) {
+    font-size: $l-size;
+  }
+}
+
+.grid-thumb-overlay p {
+  font-size: $xs-size;
+  padding: $xxxs-size;
+  margin: 0;
+  @media  (min-width: 400px ) {
+    font-size: $s-size;
+  }
+  @media  (min-width: 580px ) {
+    font-size: $m-size;
+  }
+}
+
+
+// PROJECTS AND LEARNINGS THUMBS 
+
+.grid-thumb-overlay.projectsThumb.show-overlay,
+.grid-thumb-overlay.learningsThumb.show-overlay {
+  opacity: .9;
+}
+
+.grid-thumb-overlay.projectsThumb,
+.grid-thumb-overlay.learningsThumb {
+  background: $pink-red-overlay;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+
+hr.hr-underline {
+  position: absolute;
+  bottom: -2px;
+  margin: 0;
+  left: 35%;
+  border: none;
+  height: 1.6px;
+  background: lighten($pink-red-overlay, 10%);
+  width: 30%;
+}
+
+.grid-thumb-overlay.projectsThumb h2,
+.grid-thumb-overlay.projectsThumb p,
+.grid-thumb-overlay.learningsThumb h2,
+.grid-thumb-overlay.learningsThumb p {
+  color: white;
+}
+
+
+
+// THE ARTICLES THUMB
+
+// The radial overlay:
+ul.grid-service .grid-thumb-overlay.articlesThumb,
+ul.grid-service .grid-thumb-overlay.articlePostBanner {  
+    // padding: 20px 20px 2px 20px;
+    color: black;
+    background: radial-gradient( circle, rgba(255, 255, 255, 0.75) 30%, rgba(255, 255, 255, .85) 50%, rgba(255, 255, 255, 1) 75%);
+    display: flex;
+    flex-direction: column; 
+    opacity: 1;
+}
+
+
+.grid-thumb-overlay.articlesThumb h2,
+.grid-thumb-overlay.articlesThumb p {
+  color: $off-black;
+}
+
+.grid-thumb-overlay.articlesThumb:hover,
+.grid-thumb-overlay.articlePostBanner:hover {
+  cursor: default;
+}
+
+.grid-thumb-overlay .hr-underline--gradient {
+  height: 1px;
+  background: rgba(136,136,163,1);
+  background: -moz-linear-gradient(left, rgba(136,136,163,1) 0%, rgba(14,11,194,1) 7%, rgba(222,0,170,1) 14%, rgba(59,162,199,1) 19%, rgba(98,125,77,1) 33%, rgba(125,77,106,1) 48%, rgba(95,22,120,1) 60%, rgba(113,77,125,1) 77%, rgba(224,0,138,1) 85%, rgba(92,7,35,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(136,136,163,1)), color-stop(7%, rgba(14,11,194,1)), color-stop(14%, rgba(222,0,170,1)), color-stop(19%, rgba(59,162,199,1)), color-stop(33%, rgba(98,125,77,1)), color-stop(48%, rgba(125,77,106,1)), color-stop(60%, rgba(95,22,120,1)), color-stop(77%, rgba(113,77,125,1)), color-stop(85%, rgba(224,0,138,1)), color-stop(100%, rgba(92,7,35,1)));
+  background: -webkit-linear-gradient(left, rgba(136,136,163,1) 0%, rgba(14,11,194,1) 7%, rgba(222,0,170,1) 14%, rgba(59,162,199,1) 19%, rgba(98,125,77,1) 33%, rgba(125,77,106,1) 48%, rgba(95,22,120,1) 60%, rgba(113,77,125,1) 77%, rgba(224,0,138,1) 85%, rgba(92,7,35,1) 100%);
+  background: -o-linear-gradient(left, rgba(136,136,163,1) 0%, rgba(14,11,194,1) 7%, rgba(222,0,170,1) 14%, rgba(59,162,199,1) 19%, rgba(98,125,77,1) 33%, rgba(125,77,106,1) 48%, rgba(95,22,120,1) 60%, rgba(113,77,125,1) 77%, rgba(224,0,138,1) 85%, rgba(92,7,35,1) 100%);
+  background: -ms-linear-gradient(left, rgba(136,136,163,1) 0%, rgba(14,11,194,1) 7%, rgba(222,0,170,1) 14%, rgba(59,162,199,1) 19%, rgba(98,125,77,1) 33%, rgba(125,77,106,1) 48%, rgba(95,22,120,1) 60%, rgba(113,77,125,1) 77%, rgba(224,0,138,1) 85%, rgba(92,7,35,1) 100%);
+  background: linear-gradient(to right, rgba(136,136,163,1) 0%, rgba(14,11,194,1) 7%, rgba(222,0,170,1) 14%, rgba(59,162,199,1) 19%, rgb(61, 80, 46) 33%, rgba(125,77,106,1) 48%, rgba(95,22,120,1) 60%, rgba(113,77,125,1) 77%, rgba(224,0,138,1) 85%, rgba(92,7,35,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8888a3', endColorstr='#5c0723', GradientType=1 );
+  bottom: 1px
+}
+
+ul.grid-service .grid-thumb-overlay .articles-thumb-date {
+  font-size: .65em;
+  margin: 0;
+  color: black
+}
+
+
+// READ Article button
+ul.grid-service .grid-thumb-overlay div a {
+  text-decoration: none;
+  color: rgb(54, 51, 51);
+  font-weight: bolder;
+  transition: color .2s ease, border 1s ease;
+  border-top: none;
+  font-size: $s-size;
+  border-bottom: none;
+  padding: 0 10px;
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+  border-radius: 10px;
+  @media (min-width: 435px) {
+    font-size: $l-size;
+  }
+}
+
+.grid-thumb-overlay a:hover {
+ color:#C80177;
+ border-right: 1px solid #C80177;
+ border-left: 1px solid #C80177;
+}
+
+.grid-thumb-overlay a:active {
+  box-shadow: inset 1px 0px 3px 0px rgba(0,0,0,.7);
+}
+
+.grid-thumb-overlay ul.articles-thumb-tags {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.grid-thumb-overlay ul.articles-thumb-tags li {
+  border: 1.5px solid rgb(141, 141, 141);
+  border-radius: 7px;
+  padding: 2px 4px;
+  font-size: .6rem;
+  margin: 3px 5px 0 0;
+  cursor: pointer;
+  transition: background .2s ease-in-out, color .2s ease-in-out;
+  align-items: center;
+  color: black;
+  @media screen and (min-width: 400px) {
+    font-size: .8rem;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: .9rem;
+  }
+}
+
+ul.grid-service .grid-thumb-overlay ul.articles-thumb-tags li:active {
+  box-shadow: inset 2px 0px 3px 0px rgba(0,0,0,.7);
+}
+
+ul.grid-service .grid-thumb-overlay ul.articles-thumb-tags li i {
+  margin-right: 2px;
+  color: rgb(75, 75, 75);
+}
+
+ul.grid-service .grid-thumb-overlay ul.articles-thumb-tags li:hover i {
+  color: #C80177;
+}

@@ -1,0 +1,43 @@
+/* THE CONTACT PAGE 
+=====================*/
+
+.sect.contact-page form div.contact-name {
+  margin-top: 10px;
+}
+
+// A wrapper that constrins the width on larger displays
+.inner-contact-wrapper {
+  @media screen and (min-width: 700px) {
+    width: 615px;
+    margin: 0 auto;
+  }
+}
+
+.sect.contact-page form div.contact-email,
+.sect.contact-page form div.contact-last-name,
+.sect.contact-page form div.contact-message,
+.sect.contact-page form div.contact-button {
+  margin-top: 30px;
+}
+
+.sect.contact-page form div.contact-name > div,
+.sect.contact-page form div.contact-email > div,
+.sect.contact-page form div.contact-last-name > div,
+.sect.contact-page form div.contact-message > div,
+.sect.contact-page form div.contact-button > div {
+  width: 90%;
+  text-align: center;
+}
+
+.sect.contact-page form input,
+.sect.contact-page form textarea {
+  width: 100%;
+  font-size: .9em;
+  color: rgb(80, 80, 80);
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+
+.sect.contact-page form input {
+  height: 40px;
+}

@@ -1,0 +1,53 @@
+.grid-thumb-overlay.articles:hover {
+  cursor: default;
+  }
+
+.grid-thumb-overlay.articlePostBanner h1 {
+  text-align: center;
+  @media screen and (min-width: 600px) {
+    text-align: left;
+    padding-left: 2rem
+  }
+}
+  
+li img.articlePostBannerImg{
+  box-shadow: none !important;
+  clip-path: ellipse(100% 94% at 13% 5%);
+}
+
+section.sect.article-banner {
+  margin: 0;
+  padding: 0;
+}
+
+ul.grid-service.article > li {
+  margin: 0;
+  max-width: none
+}
+
+ul.articles-thumb-tags li {
+  font-size: .5rem;
+}
+
+.articles-banner-posted-date {
+  position: absolute;
+  bottom: 0;
+  right: 2rem;
+}
+
+div#banner {
+  @media screen and (min-width: 930px) {
+    width: 930px;
+    margin: 0 auto;
+  };
+}
+
+ul.grid-service.article > li {
+  @media screen and (min-width: 930px) {
+    width: 930px
+  }
+
+  @media screen and (min-width: 1150px) {
+    width: 930px
+  }
+}

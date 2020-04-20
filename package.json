@@ -1,0 +1,43 @@
+{
+  "name": "viebase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
+    "start": "node server/app.js",
+    "heroku-postbuild": "npm run build:prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "babel-polyfill": "^6.26.0",
+    "css-loader": "^3.5.2",
+    "express": "^4.17.1",
+    "firebase": "^7.14.0",
+    "history": "^4.10.1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "moment": "^2.24.0",
+    "node-sass": "^4.13.1",
+    "normalize.css": "^8.0.1",
+    "react": "^16.13.1",
+    "react-dates": "^21.8.0",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
+    "react-spring": "^8.0.27",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
