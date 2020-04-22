@@ -15,7 +15,7 @@ const LearningPage = (props) => {
     if(learning.liveSiteLink) {
       return (
         <span id="liveSiteLink">               
-          <Link to={learning.liveSiteLink} className="button button-btn1">View Live Site</Link>
+          <a href={learning.liveSiteLink} className="button button--btn-green">View Live Site</a>
         </span>
       )
     } else {
@@ -35,7 +35,7 @@ const LearningPage = (props) => {
           <img src={learning.thumbPic} alt={learning.name} />
           <div className="btn-links-wrapper">
             <span className="git-hub-link">
-              <a className="button button--btn1">
+              <a href={learning.githubLink} className="button button--btn1">
                 Github Repo
               </a>
             </span>
@@ -45,7 +45,12 @@ const LearningPage = (props) => {
         <div className="col col2">
           <h2>About this Course / Tutorial:</h2>
           <hr className="sect-line" />
-          <p>{learning.longDescription}</p>
+          <div>
+            <p>{learning.longDescription}</p>
+          </div> 
+          <div className="btn-links-wrapper">
+            <Link to={`/articles/${learning.studyArticleId}`} className="button button--btn1">Developer Study</Link>
+          </div>         
         </div>
       </div>
       <div className="row row2">

@@ -36,15 +36,26 @@
 }
 
 .col1 img,
-.col1 .btn-links-wrapper {
+.col1 .btn-links-wrapper,
+.col2 div {
   width: 90%;
   max-width: 500px;
+  margin: 0 auto;
 }
 
 .col1 .btn-links-wrapper {
   display: flex;
   justify-content: space-between;
   margin: $l-size auto;
+}
+
+.col2 div {
+  margin-bottom: 20px;
+  
+}
+
+.col2 div p {
+  line-height: 1.5;
 }
 
 .row h1{

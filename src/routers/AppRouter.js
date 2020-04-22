@@ -17,7 +17,6 @@ import PageNotFound from '../components/PageNotFound';
 import ProjectPage from '../components/ProjectPage';
 import ProjectsPage from '../components/ProjectsPage';
 
-
 const AppRouter = () => {
 
   const history = createBrowserHistory();
@@ -28,14 +27,14 @@ const AppRouter = () => {
       <HeaderBar />
       <PageContent>
         <Switch>
-          <Route path="/" component={HomePage} exact={true}/>
-          <Route path="/projects/:id" component={ProjectPage} exact={true}/>
-          <Route path="/projects" component={ProjectsPage}/>
-          <Route path="/articles/:id" component={ArticlePage}/>
+          <Route path="/" component={HomePage} exact={true} />
+          <Route path="/projects/:id" component={ProjectPage} exact={true} />
+          <Route path="/projects" component={ProjectsPage} />
+          <Route path="/articles/:id" component={ArticlePage} />
           <Route path="/articles" component={ArticlesPage} />
-          <Route path="/learnings/:id" component={LearningPage}/>
+          <Route path="/learnings/:id" component={LearningPage} />
           <Route path="/learnings" component={LearningsPage} />
-          <Route path="/contact" component={ContactPage}/> 
+          <Route path="/contact" component={ContactPage} /> 
           <Route component={PageNotFound} />
         </Switch>
       </PageContent>

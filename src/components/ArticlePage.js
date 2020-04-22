@@ -18,13 +18,18 @@ const ArticlePage = (props) => {
     props.push('/articles');
   }
 
+  function createMarkup() {
+    return {__html: article.article};
+  }
+  
+ 
   return (
     <ArticlePortal>
       <section className="sect article-banner">
         <GridService addClassName="article" list={[article]} imgOverlay={true} serviceType="articlePostBanner" staticOverlay={true} />
       </section>
       <section className="sect article-page">
-        {article.article}
+      <div dangerouslySetInnerHTML={createMarkup()}></div>
       </section>
     </ArticlePortal>
   )

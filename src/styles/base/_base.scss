@@ -135,12 +135,16 @@ hr.sect-line {
   outline: none;
   border: none;
   font-family: 'Open Sans', Arial;
-  padding: $xs-size
+  padding: $xs-size;
+  color: white;
 }
 
 .button--btn1 {
   background: $button-pink;
-  color: white;
+}
+
+.button--btn-green {
+  background: $button-green;
 }
 
 .button--btn1:hover {
