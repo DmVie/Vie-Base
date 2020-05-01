@@ -49,7 +49,7 @@ const LearningPage = (props) => {
             <p>{learning.longDescription}</p>
           </div> 
           <div className="btn-links-wrapper">
-            <Link to={`/articles/${learning.studyArticleId}`} className="button button--btn1">Developer Study</Link>
+            {learning.studyArticleId && <Link to={`/articles/${learning.studyArticleId}`} className="button button--btn1">Developer Study</Link>}
           </div>         
         </div>
       </div>

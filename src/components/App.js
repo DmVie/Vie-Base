@@ -32,22 +32,22 @@ const App = () => {
         console.log('The Occurence of an error has unexpectedly occurred :( ', e.message);
       })
 
-      setArticles()
-      .then((articlesFromDBActionGenerator) => {
-        articlesDispatch(articlesFromDBActionGenerator);
-      })
-      .catch((e) => {
-        console.log('The Occurence of an error has unexpectedly occurred :( ', e.message);
-      })
+    setArticles()
+    .then((articlesFromDBActionGenerator) => {
+      articlesDispatch(articlesFromDBActionGenerator);
+    })
+    .catch((e) => {
+      console.log('The Occurence of an error has unexpectedly occurred :( ', e.message);
+    })
 
-      setLearnings()
-      .then((learningsFromDBActionGenerator) => {
-        learningsDispatch(learningsFromDBActionGenerator);
-        setPageLoading(false)
-      })
-      .catch((e) => {
-        console.log('The Occurence of an error has unexpectedly occurred :( ', e.message);
-      })
+    setLearnings()
+    .then((learningsFromDBActionGenerator) => {
+      learningsDispatch(learningsFromDBActionGenerator);
+      setPageLoading(false)
+    })
+    .catch((e) => {
+      console.log('The Occurence of an error has unexpectedly occurred :( ', e.message);
+    })
   }, [])
 
  
